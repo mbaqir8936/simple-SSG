@@ -1,19 +1,22 @@
 ---
-title: My New Hobby - Mohammad Page 1
+title: A3:2017-Sensitive Data Exposure - Mohammad Page 1
 date: 1580577200000
-description: I figured life is short. Why not go for what you want?
+description: Many web applications and APIs do not properly protect sensitive data, such as financial, healthcare, and PII. Attackers may steal or modify such weakly protected data to conduct credit card fraud, identity theft, or other crimes. Sensitive data may be compromised without extra protection, such as encryption at rest or in transit, and requires special precautions when exchanged with the browser.
 ---
 
-# Suzuki SV650
+# Sensitive Data Exposure
+Many web applications and APIs do not properly protect sensitive data, such as financial, healthcare, and PII. Attackers may steal or modify such weakly protected data to conduct credit card fraud, identity theft, or other crimes. Sensitive data may be compromised without extra protection, such as encryption at rest or in transit, and requires special precautions when exchanged with the browser.
 
-![image of a Suzuki SV650 motorcycle](content\assets\images\sv650am1_b1g_right.jpg)
-Source: [Suzuki SV650](https://www.globalsuzuki.com/motorcycle/products/sv650/#photos)
+## Threat Agents
+Rather than directly attacking crypto, attackers steal keys, execute man-in-the-middle attacks, or steal clear text data off the server, while in transit, or from the user’s client, e.g. browser. A manual attack is generally required. Previously retrieved password databases could be brute forced by Graphics Processing Units (GPUs).
 
-- The Suzuki SV650 and variants are street motorcycles manufactured since 1999 for the international market by the Suzuki Motor Corporation, featuring a mid-sized V-twin engine and medium performance components. In 2009, Suzuki replaced the naked SV650 with the SFV650 Gladius. In 2016, the Gladius name was discontinued and the 2017 model was reverted to SV650.
-- Engine: 645 cc (39.4 cu in) liquid-cooled 4-stroke 8-valve DOHC 90° V-twin
-TSCC (Twin Swirl Combustion Chamber)
-- Power: 64.2 hp (47.9 kW) @ 9000 rpm
-- Torque: 42.3 lbf⋅ft (57.4 N⋅m) @ 7200 rpm
-- Wet Weight: 189 kg (417 lb)
+## Security Weakness
+Over the last few years, this has been the most common impactful attack. The most common flaw is simply not encrypting sensitive data. When crypto is employed, weak key generation and management, and weak algorithm, protocol and cipher usage is common, particularly for weak password hashing storage techniques. For data in transit, server-side weaknesses are mainly easy to detect, but hard for data at rest.
 
-Source: [Wikipedia](https://en.wikipedia.org/wiki/Suzuki_SV650)
+## Impacts
+Failure frequently compromises all data that should have been protected. Typically, this information includes sensitive personal information (PII) data such as health records, credentials, personal data, and credit cards, which often require protection as defined by laws or regulations such as the EU GDPR or local privacy laws.
+
+## Group "Plain-English" Explanation
+Sensitive data exposure can occur in many different ways. Attackers can steal keys, override encryption, hack the server or directly attack the user. The main method to avoid this is to encrypt sensitive information. 
+
+Source: [OSWAP](https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure)
